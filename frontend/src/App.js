@@ -13,10 +13,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/create" element={<CreateBooks />} />
-      <Route path="/edit/:id" element={<EditBooks />} />
-      <Route path="/show/:id" element={<ShowBooks />} />
-      <Route path="/delete/:id" element={<DeleteBooks />} />
+      <Route path="books/create" element={<CreateBooks />} />
+      <Route path="books/details/:id" element={<ShowBooks />} /> {/* ShowBooks is used for both "details" and "show" */}
+      <Route path="books/edit/:id" element={<EditBooks />} />
+      <Route path="books/show/:id" element={<ShowBooks />} />
+      <Route path="books/delete/:id" element={<DeleteBooks />} />
     </Routes>
   );
 }
